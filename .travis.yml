@@ -1,0 +1,14 @@
+language: java
+jdk:
+  - oraclejdk8
+notifications:
+  email: false
+install:
+  - chmod +x ./gradlew
+  - ./gradlew --info assemble
+script: true
+deploy:
+  provider: heroku
+  api_key: a77bbe1d-a864-4548-8d8c-144c809c6c9f
+  app: dino-parking-system-backend
+
